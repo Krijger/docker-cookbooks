@@ -1,7 +1,5 @@
-FROM ubuntu:precise
-MAINTAINER Quinten Krijger < qkrijger [at] gmail {dot} com>
-# make sure the package repository is up to date
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+FROM quintenk/supervisor
+MAINTAINER Quinten Krijger "https://github.com/Krijger"
 
 RUN apt-get update && apt-get -y install python-software-properties
 RUN add-apt-repository ppa:webupd8team/java
