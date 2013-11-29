@@ -1,4 +1,5 @@
 FROM quintenk/supervisor
+
 MAINTAINER Quinten Krijger "https://github.com/Krijger"
 
 RUN apt-get -y install wget
@@ -9,7 +10,3 @@ RUN ln -s /opt/mongodb/bin/mongo /usr/local/bin/mongo
 RUN ln -s /opt/mongodb/bin/mongod /usr/local/bin/mongod
 RUN (cd /tmp && tar zxf mongo.tar.gz && mv mongodb-* /opt/mongodb)
 RUN rm -rf /tmp/*
-
-EXPOSE 27017
-ADD supervisord.conf /etc/supervisord.conf
-CMD ["/usr/local/bin/supervisord"]
