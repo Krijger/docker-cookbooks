@@ -1,7 +1,5 @@
-FROM quintenk/jdk7-oracle
-MAINTAINER Quinten Krijger "qkrijger@gmail.com"
+FROM quintenk/jdk-oracle:7
+
+MAINTAINER Quinten Krijger "https://github.com/Krijger"
 
 RUN apt-get -y install tomcat7
-RUN echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> /etc/default/tomcat7
-
-EXPOSE 8080
