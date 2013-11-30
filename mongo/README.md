@@ -1,7 +1,7 @@
 Mongo (a Docker image)
 ======================
 
-Available on the [Docker index] (https://index.docker.io/) **as quintenk/mongo:2.4.8**
+Available on the [Docker index] (https://index.docker.io/) as **quintenk/mongo:2.4.8**
 
 A child container might have a Dockerfile ending in:
 

@@ -1,7 +1,7 @@
 Supervisord (a Docker image)
 ============================
 
-Available on the [Docker index] (https://index.docker.io/) **as quintenk/supervisor**
+Available on the [Docker index] (https://index.docker.io/) as **quintenk/supervisor**
 
 Based on ubuntu 12.04 LTS
 
