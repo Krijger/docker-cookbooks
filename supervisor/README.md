@@ -1,6 +1,8 @@
 Supervisord (a Docker image)
 ============================
 
+Available on the [Docker index] (https://index.docker.io/) **as quintenk/supervisor**
+
 Based on ubuntu 12.04 LTS
 
 Supervisord is a linux process manager ([Website](http://supervisord.org/ "Supervisord website")). It allows us to start containers with e.g.
