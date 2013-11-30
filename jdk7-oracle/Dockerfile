@@ -1,7 +1,8 @@
 FROM quintenk/supervisor
+
 MAINTAINER Quinten Krijger "https://github.com/Krijger"
 
-RUN apt-get update && apt-get -y install python-software-properties
+RUN apt-get -y install python-software-properties
 RUN add-apt-repository ppa:webupd8team/java
 RUN apt-get update && apt-get -y upgrade
 
