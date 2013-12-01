@@ -1,0 +1,20 @@
+digraph docker {
+ "ubuntu" [label=<
+    ubuntu:12.04  <br/>
+    ubuntu:latest <br/>
+    ubuntu:precise>,shape=box,fillcolor="paleturquoise",style="filled,rounded"];
+ "supervisor" [label="quintenk/supervisor:latest",shape=box,fillcolor="paleturquoise",style="filled,rounded"];
+ "jdk-oracle" [label="quintenk/jdk-oracle:7\nquintenk/jdk-oracle:latest",shape=box,fillcolor="paleturquoise",style="filled,rounded"];
+ "jenkins" [label="quintenk/jenkins:latest",shape=box,fillcolor="paleturquoise",style="filled,rounded"];
+ "tomcat" [label="quintenk/tomcat:7\nquintenk/tomcat:latest",shape=box,fillcolor="paleturquoise",style="filled,rounded"];
+ "elasticsearch" [label="quintenk/elasticsearch:0.90.5\nquintenk/elasticsearch:latest",shape=box,fillcolor="paleturquoise",style="filled,rounded"];
+ "mongo" [label="quintenk/mongo:2.4.8\nquintenk/mongo:latest",shape=box,fillcolor="paleturquoise",style="filled,rounded"];
+
+ "ubuntu" -> "supervisor";
+ "supervisor" -> "jdk-oracle";
+ "supervisor" -> "mongo";
+ "jdk-oracle" -> "jenkins";
+ "jdk-oracle" -> "tomcat";
+ "jdk-oracle" -> "elasticsearch";
+
+}
