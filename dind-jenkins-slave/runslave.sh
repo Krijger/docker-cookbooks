@@ -9,7 +9,7 @@ VAR_LIB_JENKINS="/var/lib/jenkins"
 SLAVE_JAR="${VAR_LIB_JENKINS}/slave.jar"
 
 if [ ! -f ${SLAVE_JAR} ] ; then
-    mkdir -P ${VAR_LIB_JENKINS}
+    mkdir -p ${VAR_LIB_JENKINS}
     wget --retry-connrefused -t inf ${SLAVE_JAR_URL} -O ${SLAVE_JAR}
 fi
 
