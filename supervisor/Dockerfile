@@ -13,5 +13,7 @@ RUN apt-get -y upgrade
 RUN apt-get -y install python-setuptools
 RUN easy_install supervisor
 RUN mkdir -p /var/log/supervisor
+# create directory for child images to store configuration in
+RUN mkdir -p /etc/supervisor/conf.d
 
 ADD supervisor.conf /etc/supervisor.conf

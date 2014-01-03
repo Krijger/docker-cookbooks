@@ -7,6 +7,6 @@ This image is meant as a base image for child images that setup [elasticsearch] 
 
 A child container might have a Dockerfile ending in:
 
-    ADD supervisord.conf /etc/supervisord.conf
+    ADD supervisord.conf /etc/supervisor/conf.d/
     EXPOSE 9200
     CMD ["/usr/local/bin/supervisord"]
