@@ -13,3 +13,5 @@ RUN apt-get -y upgrade
 RUN apt-get -y install python-setuptools
 RUN easy_install supervisor
 RUN mkdir -p /var/log/supervisor
+
+ADD supervisor.conf /etc/supervisor.conf
