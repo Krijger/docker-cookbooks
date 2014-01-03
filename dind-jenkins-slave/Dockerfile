@@ -13,11 +13,14 @@ MAINTAINER Quinten Krijger "https://github.com/Krijger"
 RUN apt-get install -qqy iptables ca-certificates lxc
 RUN wget https://get.docker.io/builds/Linux/x86_64/docker-latest -O /usr/local/bin/docker
 
+RUN apt-get -y install dnsmasq
+
 # RUN apt-get install -qqy subversion
 # RUN apt-get install -qqy git
 # RUN apt-get install -qqy maven
 
-ADD ./wrapdocker /usr/local/bin/wrapdocker
+ADD ./dnsmasq.conf /etc/
+ADD ./wrapdocker /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker /usr/local/bin/wrapdocker
 # VOLUME /var/lib/docker
 

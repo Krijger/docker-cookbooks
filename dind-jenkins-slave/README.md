@@ -18,4 +18,8 @@ Run with
         [-e JENKINS_PORT_8080_TCP_PORT=${port for master jenkins, defaults to 8080}]
         -e SLAVE_NAME=${slave name, you name the slave when creating the node on the master jenkins}
         [-e JENKINS_SECRET=${secret for jenkins - if needed you can find this in the information page for the slave node (on master)}]
+        -dns 127.0.0.1
         -d quintenk/dind-jenkins-slave
+
+TCP port for JNLP slave agents
+http://jenkins.rijksoverheid.nl/configureSecurity/

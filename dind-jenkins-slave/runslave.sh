@@ -14,7 +14,7 @@ if [ ! -f ${SLAVE_JAR} ] ; then
 fi
 
 if [[ $JENKINS_SECRET ]] ; then
-    java -jar slave.jar -jnlpUrl ${JNLP_URL} -secret ${JENKINS_SECRET}
+    java -jar ${SLAVE_JAR} -jnlpUrl ${JNLP_URL} -secret ${JENKINS_SECRET}
 else
-    java -jar slave.jar -jnlpUrl ${JNLP_URL}
+    java -jar ${SLAVE_JAR} -jnlpUrl ${JNLP_URL}
 fi
