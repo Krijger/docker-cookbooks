@@ -11,5 +11,4 @@ A child container might have a Dockerfile ending in:
     EXPOSE 8080
     # also expose debugging port
     EXPOSE 8000
-    ADD supervisord.conf /etc/supervisord.conf
-    CMD ["/usr/local/bin/supervisord"]
+    CMD supervisord -c /etc/supervisor.conf

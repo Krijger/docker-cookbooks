@@ -15,4 +15,4 @@ This image is intended to be built on and is the base image for all recipes in [
 
 To make easy use of supervisord, an inheriting Docker project should contain a file `[SOME_NAME].conf` and add that to /etc/supervisor/conf.d in the Dockerfile. Note that you can find examples of such files in this repositories projects.
 
-To run supervisor, you can add `CMD ["supervisord -c /etc/supervisor.conf"]`.
+To run supervisor, you can add `CMD supervisord -c /etc/supervisor.conf`.
