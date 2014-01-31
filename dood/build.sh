@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t quintenk/dood2 .
+docker build -t quintenk/dood .
