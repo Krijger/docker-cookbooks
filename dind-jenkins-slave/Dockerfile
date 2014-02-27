@@ -27,5 +27,7 @@ RUN chmod +x /usr/local/bin/docker /usr/local/bin/wrapdocker
 ADD runslave.sh /usr/local/bin/runslave
 RUN chmod +x /usr/local/bin/runslave
 
-ADD supervisord.conf /etc/supervisord.conf
-CMD ["/usr/local/bin/supervisord"]
+ADD docker.sv.conf /etc/supervisor/conf.d/
+ADD dnsmasq.sv.conf /etc/supervisor/conf.d/
+ADD jenkins-slave.sv.conf /etc/supervisor/conf.d/
+CMD supervisord -c /etc/supervisor.conf
