@@ -13,7 +13,7 @@ Supervisor is a linux process manager ([Supervisor website](http://supervisord.o
 
 This image is intended to be built on and is the base image for all recipes in [this project](https://github.com/Krijger/docker-cookbooks). Therefore, a child Dockerfile should not have to upgrade ubuntu.
 
-To make easy use of supervisor, an inheriting Docker project should contain a file `[SOME_NAME].conf` and add that to /etc/supervisor/conf.d in the Dockerfile. Note that you can find examples of such files in this repositories projects. Personally, I name all my supervisor configuration file [SERVICE].sv.conf for clarity.
+To make easy use of supervisor, an inheriting Docker project should contain one or more files `[SOME_NAME].conf` and add those to /etc/supervisor/conf.d in the Dockerfile. Note that you can find examples of such files in this repositories projects. Personally, I name all my supervisor configuration file [SERVICE].sv.conf for clarity.
 
 To run supervisor, you can add `CMD supervisord -c /etc/supervisor.conf`.
 
