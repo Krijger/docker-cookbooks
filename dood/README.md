@@ -7,4 +7,4 @@ A usecase for this image would be to manage your images (e.g. with a Jenkins ins
 
 run with
 
-    docker run -i -t -v /run:/run quintenk/dood /bin/bash
+    docker run -i -t -v /run/docker.sock:/run/docker.sock quintenk/dood /bin/bash

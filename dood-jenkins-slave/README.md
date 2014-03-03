@@ -9,7 +9,7 @@ Installed are:
 Run with
 
     docker run
-        -v /run:/run
+        -v /run/docker.sock:/run/docker.sock
         [-v ${absolute path to the jenkins directory - helpful for restarts}:/var/jenkins]
         -e JENKINS_PORT_8080_TCP_ADDR=${host for master jenkins}
         [-e JENKINS_PORT_8080_TCP_PORT=${port for master jenkins, defaults to 8080}]
