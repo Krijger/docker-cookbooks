@@ -2,10 +2,18 @@ Complete image to run Jenkins as a slave with headless Firefox
 ==============================================================
 
 Installed are:
+
 - Supervisord (inherited)
 - Oracle Java 7 Development Kit (inherited)
 - Firefox
 - Xvfb headless display driver
+
+Run a headless process
+----------------------
+
+Run your script, but first do
+
+    export DISPLAY=:10
 
 Run with access to Docker on the host
 -------------------------------------
