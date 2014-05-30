@@ -1,7 +1,7 @@
 Elasticsearch (a Docker image)
 ==============================
 
-Available on the [Docker index] (https://index.docker.io/) as **quintenk/elasticsearch:1.0.1**
+Available on the [Docker index] (https://index.docker.io/) as **quintenk/elasticsearch:1.1.1**
 
 This image is meant as a base image for child images that setup [elasticsearch] (http://www.elasticsearch.org/) with application specific configuration.
 
