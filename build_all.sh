@@ -1,18 +1,14 @@
 #!/bin/bash -ex
 
 cd supervisor
-docker build -t quintenk/supervisor .
+./build.sh
 cd ../mongo
-docker build -t quintenk/mongo .
-docker build -t quintenk/mongo:2.4.8 .
+./build.sh
 cd ../jdk7-oracle
-docker build -t quintenk/jdk-oracle .
-docker build -t quintenk/jdk-oracle:7 .
-cd ../elasticsearch
-docker build -t quintenk/elasticsearch .
-docker build -t quintenk/elasticsearch:0.90.5 .
+./build.sh
+cd ../elasticsearch-1.x
+./build.sh
 cd ../tomcat7
-docker build -t quintenk/tomcat .
-docker build -t quintenk/tomcat:7 .
+./build.sh
 cd ../jenkins
-docker build -t quintenk/jenkins .
+./build.sh

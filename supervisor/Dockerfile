@@ -1,19 +1,30 @@
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 
 MAINTAINER Quinten Krijger "https://github.com/Krijger"
 
+ENV DEBIAN_FRONTEND noninteractive
+
 # make sure the package repository is up to date and update ubuntu
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get -y upgrade
+RUN \
+  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
+  apt-get update && \
+  apt-get -y upgrade && \
+  locale-gen en_US.UTF-8
+RUN apt-get install -y curl git htop man software-properties-common unzip vim wget
 
-# install supervisor (which has no package on 12.04) to manage our processes
-# the supervisor config file is more likely to change and is therefore added as a later step
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+ENV HOME /root
 
-RUN apt-get -y install python-setuptools
-RUN easy_install supervisor
-RUN mkdir -p /var/log/supervisor
+# supervisor installation && 
 # create directory for child images to store configuration in
-RUN mkdir -p /etc/supervisor/conf.d
+RUN apt-get -y install supervisor && \
+  mkdir -p /var/log/supervisor && \
+  mkdir -p /etc/supervisor/conf.d
 
+# supervisor base configuration
 ADD supervisor.conf /etc/supervisor.conf
+
+# default command
+CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
