@@ -27,4 +27,4 @@ RUN apt-get -y install supervisor && \
 ADD supervisor.conf /etc/supervisor.conf
 
 # default command
-CMD ["supervisord", "-c", "/etc/supervisord.conf"]
+CMD ["supervisord", "-c", "/etc/supervisor.conf"]
